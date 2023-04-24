@@ -1,5 +1,7 @@
 package br.com.campominado.model;
 
+import br.com.campominado.exception.ExplosaoException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +36,30 @@ public class Campo {
          }else {
              return false;
          }
+    }
+
+    public void alternaMarcacao(){
+        if (!aberto){
+            aberto = true;
+        }
+    }
+    public boolean abrir() {
+        if (!aberto && !marcado) {
+            if (isMinado) {
+                throw new ExplosaoException();
+            }
+
+            if (vizinhaSegura()) {
+                vizinhos.forEach(v -> v.abrir());
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public boolean vizinhaSegura(){
+        return vizinhos.stream()
+                .noneMatch(v -> v.isMinado);
     }
 
 }
