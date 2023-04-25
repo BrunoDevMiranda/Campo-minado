@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Campo {
-    private boolean minado;
+
     private final int linha;
     private final int coluna;
     private boolean aberto = false;
-    private boolean isMinado = false;
+    private boolean minado = false;
     private boolean marcado = false;
     private List<Campo> vizinhos = new ArrayList<>();
 
@@ -46,7 +46,7 @@ public class Campo {
     public boolean abrir() {
         if (!aberto && !marcado) {
             aberto = true;
-            if (isMinado) {
+            if (minado) {
                 throw new ExplosaoException();
             }
 
@@ -60,7 +60,7 @@ public class Campo {
     }
     public boolean vizinhaSegura(){
         return vizinhos.stream()
-                .noneMatch(v -> v.isMinado);
+                .noneMatch(v -> v.minado);
     }
 
     public boolean isMarcado(){
@@ -68,7 +68,7 @@ public class Campo {
     }
 
     public void minar(){
-        isMinado = true;
+        minado = true;
     }
 
     public boolean isAberto(){
@@ -78,13 +78,25 @@ public class Campo {
         return !isAberto();
     }
 
+    public boolean isMinado() {
+        return minado;
+    }
+
+    public void setMinado(boolean minado) {
+        this.minado = minado;
+    }
+
+    public void setMarcado(boolean marcado) {
+        this.marcado = marcado;
+    }
+
     public boolean objetivoAlcancado(){
         boolean desvendado = !minado && aberto;
         boolean protegido = minado && marcado;
         return desvendado || protegido;
     }
     public long minaNaVizinnhaca(){
-        return vizinhos.stream().filter(v -> v.isMinado).count();
+        return vizinhos.stream().filter(v -> v.minado).count();
     }
 
     public void reniciar(){
