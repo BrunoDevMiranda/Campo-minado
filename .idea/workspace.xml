@@ -4,21 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f4b6f71-79ed-4fc4-a9f3-972f8f1b122a" name="Changes" comment="Inicio do Projeto">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/au_dius_pact_jvm_provider_junit5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    <list default="true" id="7f4b6f71-79ed-4fc4-a9f3-972f8f1b122a" name="Changes" comment="Classe Campo, refatorado">
+      <change afterPath="$PROJECT_DIR$/src/br/com/campominado/exception/SairException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/campominado/model/Tabuleiro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/campominado/view/TabuleiroConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Campo-minado.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Campo-minado.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/campominado/model/Campo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/campominado/model/Campo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -32,27 +39,125 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.47976878",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47976878&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projetos\Campo-minado\src" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.campominado.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Campo-minado" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CampoTest.abrirMinadoMarcado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Campo-minado" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.CampoTest" />
+      <option name="METHOD_NAME" value="abrirMinadoMarcado" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CampoTest.abrirMinadoNaoMarcado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Campo-minado" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.CampoTest" />
+      <option name="METHOD_NAME" value="abrirMinadoNaoMarcado" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CampoTest.vizinhaSegura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Campo-minado" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.CampoTest" />
+      <option name="METHOD_NAME" value="vizinhaSegura" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CampoTest.vizinhaSegura2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Campo-minado" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.CampoTest" />
+      <option name="METHOD_NAME" value="vizinhaSegura2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CampoTest.vizinhaSegura2" />
+        <item itemvalue="JUnit.CampoTest.vizinhaSegura" />
+        <item itemvalue="JUnit.CampoTest.abrirMinadoNaoMarcado" />
+        <item itemvalue="JUnit.CampoTest.abrirMinadoMarcado" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,7 +166,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682356567362</updated>
-      <workItem from="1682356568577" duration="2301000" />
+      <workItem from="1682356568577" duration="9056000" />
+      <workItem from="1682380640049" duration="779000" />
+      <workItem from="1682381435303" duration="176000" />
+      <workItem from="1682382008476" duration="98000" />
+      <workItem from="1682427905431" duration="10996000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio do Projeto">
       <created>1682356658288</created>
@@ -70,7 +179,70 @@
       <option name="project" value="LOCAL" />
       <updated>1682356658288</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add arquivos da biblioteca">
+      <created>1682359297554</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682359297554</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Classe Campo criada.">
+      <created>1682359822765</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682359822765</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Classe Campo:&#10;Metodo criado , vizinhos">
+      <created>1682361346827</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682361346827</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Classe CampoTest:&#10;Metodo test criado , vizinhos">
+      <created>1682361366722</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682361366722</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Classe Campo:&#10;Metodo abrir e vizinhaSegura criados">
+      <created>1682362241215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682362241215</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Classe ExplosaoException criada">
+      <created>1682362282007</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682362282007</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Classe Campo, Novos Metodos adcionados">
+      <created>1682364287746</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682364287746</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Classe Campo, Novos Metodos adcionados">
+      <created>1682365991285</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682365991285</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Classe Campo, refatorado">
+      <created>1682431416956</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682431416956</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +273,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inicio do Projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicio do Projeto" />
+    <MESSAGE value="Add arquivos da biblioteca" />
+    <MESSAGE value="Classe Campo criada." />
+    <MESSAGE value="Classe Campo:&#10;Metodo criado , vizinhos" />
+    <MESSAGE value="Classe CampoTest:&#10;Metodo test criado , vizinhos" />
+    <MESSAGE value="Classe Campo:&#10;Metodo abrir e vizinhaSegura criados" />
+    <MESSAGE value="Classe ExplosaoException criada" />
+    <MESSAGE value="Classe Campo, Novos Metodos adcionados" />
+    <MESSAGE value="Classe Campo, refatorado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classe Campo, refatorado" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Campo_minado$CampoTest_abrirMinadoNaoMarcado.ic" NAME="CampoTest.abrirMinadoNaoMarcado Coverage Results" MODIFIED="1682363514765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Campo_minado$CampoTest_vizinhaSegura2.ic" NAME="CampoTest.vizinhaSegura2 Coverage Results" MODIFIED="1682364210711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Campo_minado$CampoTest.ic" NAME="CampoTest Coverage Results" MODIFIED="1682363002682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
   </component>
 </project>
