@@ -1,5 +1,5 @@
-<h1>Este é um projeto do jogo de campo minado desenvolvido em Java.
-Em Construção</h1>
+<h1>Este é um projeto do jogo de campo minado no console desenvolvido em Java.
+</h1>
 
 <h2>Como jogar</h2>
 Para jogar o jogo, execute a classe CampoMinado.java na sua IDE Java favorita ou compile o código utilizando o comando javac CampoMinado.java no terminal e execute o arquivo gerado com o comando java CampoMinado.
